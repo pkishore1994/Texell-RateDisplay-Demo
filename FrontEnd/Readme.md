@@ -1,6 +1,3 @@
-## ✅ `/Frontend/README.md` (Angular)
-
-```markdown
 # 🌐 Texell UI – Angular Frontend
 
 This is the frontend for the **Texell Rate Display Demo**, which fetches and displays real-time financial product data using a responsive UI.
