@@ -1,0 +1,24 @@
+using Microsoft.AspNetCore.Mvc;
+using Texell.API.Models;
+
+namespace Texell.API.Controllers
+{
+    [ApiController]
+    [Route("api/[controller]")]
+    public class RatesController : ControllerBase
+    {
+        [HttpGet]
+        public IActionResult GetRates()
+        {
+            var rates = new List<Rate>
+            {
+                new Rate { Type = "Auto Loan", RateValue = "4.74%", Term = "60 months" },
+                new Rate { Type = "Home Equity", RateValue = "5.99%", Term = "15 years" },
+                new Rate { Type = "Personal Loans", RateValue = "9.90%", Term = "5 years" },
+                new Rate { Type = "Certificates (CDs)", RateValue = "4.60%", Term = "12 months" }
+            };
+
+            return Ok(rates);
+        }
+    }
+}
