@@ -1,0 +1,10 @@
+<div *ngIf="loading">Loading rates...</div>
+<div *ngIf="error">{{ error }}</div>
+
+<div *ngIf="!loading && !error" class="rate-grid">
+  <div *ngFor="let rate of rates" class="rate-card">
+    <h3>{{ rate.type }}</h3>
+    <p>Rate: <strong>{{ rate.rateValue }}</strong></p>
+    <p>Term: {{ rate.term }}</p>
+  </div>
+</div>
